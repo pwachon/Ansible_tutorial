@@ -8,8 +8,10 @@
     apt: 
       update_cache: yes
       state: latest
+    when: ansible_distribution == "Ubuntu"
 
   - name: install tmux package
     apt:
       name: tmux
       state: latest
+    when: ansible_distribution == "Ubuntu"    
